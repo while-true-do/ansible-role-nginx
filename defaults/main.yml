@@ -1,0 +1,36 @@
+---
+wtd_nginx_packages: ["nginx"]
+
+wtd_nginx_conf_path: "/etc/nginx"
+wtd_nginx_vhost_path: "/etc/nginx/conf.d"
+
+# Config
+wtd_nginx_user: "nginx"
+
+wtd_nginx_error_log: "/var/log/nginx/error.log"
+
+# loglevel can be: debug, info, notice, warn, error, crit, alert, or emerg
+wtd_nginx_error_log_loglevel: "error"
+wtd_nginx_access_log_main: "/var/log/nginx/access.log"
+wtd_nginx_access_log_main_log_format: |
+  '$remote_addr - $remote_user [$time_local] "$request" '
+  '$status $body_bytes_sent "$http_referer" '
+  '"$http_user_agent" "$http_x_forwarded_for"'
+
+# don't show nginx version per default:
+wtd_nginx_server_tokens: "off"
+
+wtd_nginx_pidfile: "/run/nginx.pid"
+wtd_nginx_worker_processes: "1"
+wtd_nginx_mime_file_path: "/etc/nginx/mime.types"
+
+wtd_nginx_worker_connections: "1024"
+
+wtd_nginx_sendfile: "on"
+#wtd_nginx_hash_bucket_size: "128"
+#wtd_nginx_tcp_nopush: "on"
+#wtd_nginx_gzip: "on"
+
+wtd_nginx_keepalive_timeout: "65"
+
+wtd_nginx_proxy_cache_path: ""

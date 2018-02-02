@@ -1,0 +1,42 @@
+# {{ ansible_managed }}
+
+user {{ wtd_nginx_user }};
+
+error_log {{ wtd_nginx_error_log }} {{ wtd_nginx_error_log_loglevel }};
+pid       {{ wtd_nginx_pidfile }};
+
+worker_processes {{ wtd_nginx_worker_processes }};
+
+events {
+    worker_connections {{ wtd_nginx_worker_connections }};
+}
+
+http {
+
+    include       {{ wtd_nginx_mime_file_path }};
+    default_type  application/octet-stream;
+
+    server_tokens {{ wtd_nginx_server_tokens }};
+
+    log_format main {{ wtd_nginx_access_log_main_log_format | indent(20) }};
+
+    access_log {{ wtd_nginx_access_log_main }} main;
+
+    sendfile {{ wtd_nginx_sendfile }};
+{% if wtd_nginx_tcp_nopush is defined %}
+    tcp_nopush {{ wtd_nginx_tcp_nopush }};
+{% endif %}
+{% if wtd_nginx_server_names_hash_bucket_size is defined %}
+    server_names_hash_bucket_size {{ wtd_nginx_server_names_hash_bucket_size }};
+{% endif %}
+{% if wtd_nginx_gzip is defined %}
+    gzip {{ wtd_nginx_gzip }};
+{% endif %}
+
+    keepalive_timeout {{ wtd_nginx_keepalive_timeout }};
+{% if wtd_nginx_proxy_cache_path %}
+    proxy_cache_path {{ wtd_nginx_proxy_cache_path }};
+{% endif %}
+
+    include {{ wtd_nginx_vhost_path }}/*.conf;
+}

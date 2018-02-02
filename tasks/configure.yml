@@ -1,0 +1,27 @@
+---
+- name: "Configure {{ wtd_nginx_conf_path }}"
+  file:
+    path: "{{ wtd_nginx_conf_path }}"
+    state: directory
+    mode: 0755
+  notify:
+   - Restart nginx
+
+- name: "Configure {{ wtd_nginx_vhost_path }}"
+  file:
+    path: "{{ wtd_nginx_vhost_path }}"
+    state: directory
+    mode: 0755
+  notify:
+    - Reload nginx
+
+- name: Configure nginx main configuration file
+  template:
+    src: nginx_conf.j2
+    dest: "{{ wtd_nginx_conf_path }}/nginx.conf"
+    owner: root
+    group: root
+    mode: 0644
+    validate: "/usr/sbin/nginx -t -c %s"
+  notify:
+   - Reload nginx

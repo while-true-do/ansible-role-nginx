@@ -1,0 +1,16 @@
+---
+- name: Install nginx
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ wtd_nginx_packages }}"
+
+- name: Include Configuration Tasks
+  include_tasks: configure.yml
+
+- name: Enable and Start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
