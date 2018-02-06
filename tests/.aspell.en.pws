@@ -4,6 +4,7 @@ Ansible
 aspell
 Github
 init
+nginx
 passlib
 reachability
 refactoring

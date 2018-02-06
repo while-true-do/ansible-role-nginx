@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/while-true-do/ansible-role-nginxsvg?branch=master)](https://travis-ci.org/while-true-do/ansible-role-nginx)
+[![Build Status](https://travis-ci.org/while-true-do/ansible-role-nginx.svg?branch=master)](https://travis-ci.org/while-true-do/ansible-role-nginx)
 
 # Ansible Role: nginx
 | A role to install and configure nginx.
 
 nginx web server will be installed, enabled and started.
-A basic configuration file without vhosts is deployed.
+A basic configuration file without virtual hosts is deployed.
 
 ## Motivation
 
