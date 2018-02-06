@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/while-true-do/ansible-role-while-true-do.nginxsvg?branch=master)](https://travis-ci.org/while-true-do/ansible-role-while-true-do.nginx)
+[![Build Status](https://travis-ci.org/while-true-do/ansible-role-nginxsvg?branch=master)](https://travis-ci.org/while-true-do/ansible-role-nginx)
 
-# Ansible Role: while-true-do.nginx
+# Ansible Role: nginx
 | A role to install and configure nginx.
 
 nginx web server will be installed, enabled and started.
@@ -12,16 +12,16 @@ This role is needed to setup nginx.
 
 ## Installation
 
-Install from [Ansible Galaxy](https://galaxy.ansible.com/while-true-do/while-true-do.nginx)
+Install from [Ansible Galaxy](https://galaxy.ansible.com/while-true-do/nginx)
 
 ```
-ansible-galaxy install while-true-do.while-true-do.nginx
+ansible-galaxy install while-true-do.nginx
 ```
 
-Install from [Github](https://github.com/while-true-do/ansible-role-while-true-do.nginx)
+Install from [Github](https://github.com/while-true-do/ansible-role-nginx)
 
 ```
-git clone https://github.com/while-true-do/ansible-role-while-true-do.nginx.git while-true-do.while-true-do.nginx
+git clone https://github.com/while-true-do/ansible-role-nginx.git while-true-do.nginx
 ```
 
 ## Requirements
@@ -93,7 +93,7 @@ Simple Example:
 ```yaml
 - hosts: servers 
   roles:
-    - { role: while-true-do.while-true-do.nginx }
+    - { role: while-true-do.nginx }
 ```
 
 Advanced Example:
@@ -101,7 +101,7 @@ Advanced Example:
 ```yaml
 - hosts: servers 
   roles:
-    - { role: while-true-do.while-true-do.nginx, wtd_nginx_worker_processes: "8", wtd_nginx_tcp_nopush: "on" }
+    - { role: while-true-do.nginx, wtd_nginx_worker_processes: "8", wtd_nginx_tcp_nopush: "on" }
 ```
 
 ## Testing
@@ -122,8 +122,8 @@ We are really happy, when somebody is joining the hard work. Please have a look
 at the links first.
 
 -   [Contribution Guidelines](./docs/CONTRIBUTING.md)
--   [Create an issue or Request](https://github.com/while-true-do/ansible-role-while-true-do.nginx/issues)
--   [See who was contributing already](https://github.com/while-true-do/ansible-role-while-true-do.nginx/graphs/contributors)
+-   [Create an issue or Request](https://github.com/while-true-do/ansible-role-nginx/issues)
+-   [See who was contributing already](https://github.com/while-true-do/ansible-role-nginx/graphs/contributors)
 
 ## License
 
