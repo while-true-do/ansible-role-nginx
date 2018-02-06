@@ -2,15 +2,17 @@
 - name: Install nginx
   package:
     name: "{{ item }}"
-    state: present
+    state: "{{ wtd_nginx_state }}"
   with_items:
     - "{{ wtd_nginx_packages }}"
 
 - name: Include Configuration Tasks
   include_tasks: configure.yml
+  when: wtd_nginx_state != "absent"
 
 - name: Enable and Start nginx
   service:
     name: nginx
     state: started
     enabled: yes
+  when: wtd_nginx_state != "absent"

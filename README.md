@@ -49,6 +49,9 @@ ansible-galaxy install -r requirements.yml
 ```yaml
 # defaults/main.yml
 ---
+# You can change the state (present|absent)
+wtd_nginx_state: "present"
+
 wtd_nginx_packages: ["nginx"]
 
 wtd_nginx_conf_path: "/etc/nginx"
