@@ -24,16 +24,16 @@ wtd_nginx_access_log_main_log_format: |
 wtd_nginx_server_tokens: "off"
 
 wtd_nginx_pidfile: "/run/nginx.pid"
-wtd_nginx_worker_processes: "1"
+wtd_nginx_worker_processes: 1
 wtd_nginx_mime_file_path: "/etc/nginx/mime.types"
 
-wtd_nginx_worker_connections: "1024"
+wtd_nginx_worker_connections: 1024
 
 wtd_nginx_sendfile: "on"
-#wtd_nginx_hash_bucket_size: "128"
+#wtd_nginx_hash_bucket_size: 128
 #wtd_nginx_tcp_nopush: "on"
 #wtd_nginx_gzip: "on"
 
-wtd_nginx_keepalive_timeout: "65"
+wtd_nginx_keepalive_timeout: 65
 
 wtd_nginx_proxy_cache_path: ""
