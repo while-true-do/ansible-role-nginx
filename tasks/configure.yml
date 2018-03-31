@@ -15,6 +15,22 @@
   notify:
     - Reload nginx
 
+- name: "Configure {{ wtd_nginx_ssl_path }}"
+  file:
+    path: "{{ wtd_nginx_ssl_path }}"
+    state: directory
+    owner: "{{ wtd_nginx_user }}"
+    group: "{{ wtd_nginx_group }}"
+    mode: 0700
+
+- name: Configure dhparam
+  openssl_dhparam:
+    path: "/etc/nginx/ssl/dhparam.pem"
+    owner: "{{ wtd_nginx_user }}"
+    group: "{{ wtd_nginx_group }}"
+    mode: 0600
+    state: "present"
+
 - name: Configure nginx main configuration file
   template:
     src: nginx.conf.j2

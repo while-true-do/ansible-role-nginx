@@ -32,6 +32,7 @@ Used Modules:
 -   [package](http://docs.ansible.com/ansible/latest/package_module.html)
 -   [service](http://docs.ansible.com/ansible/latest/service_module.html)
 -   [template](http://docs.ansible.com/ansible/latest/template_module.html)
+-   [openssl_dhparam](http://docs.ansible.com/ansible/latest/openssl_dhparam_module.html)
 
 ## Dependencies
 
@@ -56,9 +57,11 @@ wtd_nginx_packages: ["nginx"]
 
 wtd_nginx_conf_path: "/etc/nginx"
 wtd_nginx_vhost_path: "/etc/nginx/conf.d"
+wtd_nginx_ssl_path: "/etc/nginx/ssl"
 
 # Config
 wtd_nginx_user: "nginx"
+wtd_nginx_group: "nginx"
 
 wtd_nginx_error_log: "/var/log/nginx/error.log"
 
