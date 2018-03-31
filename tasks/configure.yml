@@ -29,7 +29,7 @@
     owner: "{{ wtd_nginx_user }}"
     group: "{{ wtd_nginx_group }}"
     mode: 0600
-    state: "{{ wtd_nginx_state }}"
+    state: "present"
 
 - name: Configure nginx main configuration file
   template:
