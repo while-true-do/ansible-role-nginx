@@ -12,16 +12,16 @@ This role is needed to setup nginx.
 
 ## Installation
 
-Install from [Ansible Galaxy](https://galaxy.ansible.com/while-true-do/nginx)
+Install from [Ansible Galaxy](https://galaxy.ansible.com/while_true_do/nginx)
 
 ```
-ansible-galaxy install while-true-do.nginx
+ansible-galaxy install while_true_do.nginx
 ```
 
 Install from [Github](https://github.com/while-true-do/ansible-role-nginx)
 
 ```
-git clone https://github.com/while-true-do/ansible-role-nginx.git while-true-do.nginx
+git clone https://github.com/while-true-do/ansible-role-nginx.git while_true_do.nginx
 ```
 
 ## Requirements
@@ -99,7 +99,7 @@ Simple Example:
 ```yaml
 - hosts: servers 
   roles:
-    - { role: while-true-do.nginx }
+    - { role: while_true_do.nginx }
 ```
 
 Advanced Example:
@@ -107,7 +107,7 @@ Advanced Example:
 ```yaml
 - hosts: servers 
   roles:
-    - { role: while-true-do.nginx, wtd_nginx_worker_processes: "8", wtd_nginx_tcp_nopush: "on" }
+    - { role: while_true_do.nginx, wtd_nginx_worker_processes: "8", wtd_nginx_tcp_nopush: "on" }
 ```
 
 ## Testing
