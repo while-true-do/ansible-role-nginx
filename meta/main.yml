@@ -2,6 +2,7 @@ dependencies:
   - while_true_do.repo_epel
 
 galaxy_info:
+  role_name: nginx
   author: while-true-do.org
   description: A role to install and configure nginx.
   company: while-true-do.org
