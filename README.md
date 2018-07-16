@@ -38,7 +38,7 @@ Used Modules:
 
 This role depends on the below roles. You have to install them:
 
--   [repo-epel](https://github.com/while-true-do/ansible-role-repo-epel)
+-   [while_true_do.repo_epel](https://github.com/while-true-do/ansible-role-repo-epel)
 
 ```
 ansible-galaxy install -r requirements.yml
