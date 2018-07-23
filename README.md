@@ -97,7 +97,7 @@ wtd_nginx_proxy_cache_path: ""
 Simple Example:
 
 ```yaml
-- hosts: servers 
+- hosts: servers
   roles:
     - { role: while_true_do.nginx }
 ```
@@ -105,7 +105,7 @@ Simple Example:
 Advanced Example:
 
 ```yaml
-- hosts: servers 
+- hosts: servers
   roles:
     - { role: while_true_do.nginx, wtd_nginx_worker_processes: "8", wtd_nginx_tcp_nopush: "on" }
 ```
@@ -124,7 +124,7 @@ bash ./tests/test-ansible.sh
 ## Contribute / Bugs
 
 Thank you so much for considering to contribute. Every contribution helps us.
-We are really happy, when somebody is joining the hard work. Please have a look 
+We are really happy, when somebody is joining the hard work. Please have a look
 at the links first.
 
 -   [Contribution Guidelines](./docs/CONTRIBUTING.md)
