@@ -22,4 +22,4 @@ https://github.com/while-true-do/community/blob/master/docs/CONTRIBUTING.md
 
 ### Attachments
 
-<!-- Please attach everything, what can help to understand the issue like screenshots, code snippets, error codes, animations, etc. -->
+<!-- Please attach everything, that can help to understand the issue like screenshots, code snippets, error codes, animations, etc. -->
