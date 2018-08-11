@@ -12,16 +12,16 @@ This role is needed to setup nginx.
 
 ## Installation
 
-Install from [Ansible Galaxy](https://galaxy.ansible.com/while-true-do/nginx)
+Install from [Ansible Galaxy](https://galaxy.ansible.com/while_true_do/nginx)
 
 ```
-ansible-galaxy install while-true-do.nginx
+ansible-galaxy install while_true_do.nginx
 ```
 
 Install from [Github](https://github.com/while-true-do/ansible-role-nginx)
 
 ```
-git clone https://github.com/while-true-do/ansible-role-nginx.git while-true-do.nginx
+git clone https://github.com/while-true-do/ansible-role-nginx.git while_true_do.nginx
 ```
 
 ## Requirements
@@ -38,7 +38,7 @@ Used Modules:
 
 This role depends on the below roles. You have to install them:
 
--   [repo-epel](https://github.com/while-true-do/ansible-role-repo-epel)
+-   [while_true_do.repo_epel](https://github.com/while-true-do/ansible-role-repo-epel)
 
 ```
 ansible-galaxy install -r requirements.yml
@@ -97,17 +97,17 @@ wtd_nginx_proxy_cache_path: ""
 Simple Example:
 
 ```yaml
-- hosts: servers 
+- hosts: servers
   roles:
-    - { role: while-true-do.nginx }
+    - { role: while_true_do.nginx }
 ```
 
 Advanced Example:
 
 ```yaml
-- hosts: servers 
+- hosts: servers
   roles:
-    - { role: while-true-do.nginx, wtd_nginx_worker_processes: "8", wtd_nginx_tcp_nopush: "on" }
+    - { role: while_true_do.nginx, wtd_nginx_worker_processes: "8", wtd_nginx_tcp_nopush: "on" }
 ```
 
 ## Testing
@@ -124,7 +124,7 @@ bash ./tests/test-ansible.sh
 ## Contribute / Bugs
 
 Thank you so much for considering to contribute. Every contribution helps us.
-We are really happy, when somebody is joining the hard work. Please have a look 
+We are really happy, when somebody is joining the hard work. Please have a look
 at the links first.
 
 -   [Contribution Guidelines](./docs/CONTRIBUTING.md)

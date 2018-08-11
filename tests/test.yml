@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - while-true-do.nginx
+    - while_true_do.nginx
