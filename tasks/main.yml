@@ -3,6 +3,7 @@
   package:
     name: "{{ wtd_nginx_packages }}"
     state: "{{ wtd_nginx_state }}"
+  become: yes
 
 - name: Include Configuration Tasks
   include_tasks: configure.yml
@@ -13,4 +14,5 @@
     name: nginx
     state: started
     enabled: yes
+  become: yes
   when: wtd_nginx_state != "absent"

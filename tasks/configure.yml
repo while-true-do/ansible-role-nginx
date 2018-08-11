@@ -4,6 +4,7 @@
     path: "{{ wtd_nginx_conf_path }}"
     state: directory
     mode: 0755
+  become: yes
   notify:
    - Restart nginx
 
@@ -12,6 +13,7 @@
     path: "{{ wtd_nginx_vhost_path }}"
     state: directory
     mode: 0755
+  become: yes
   notify:
     - Reload nginx
 
@@ -22,6 +24,7 @@
     owner: "{{ wtd_nginx_user }}"
     group: "{{ wtd_nginx_group }}"
     mode: 0700
+  become: yes
 
 - name: Configure dhparam
   openssl_dhparam:
@@ -30,6 +33,7 @@
     group: "{{ wtd_nginx_group }}"
     mode: 0600
     state: "present"
+  become: yes
 
 - name: Configure nginx main configuration file
   template:
@@ -39,5 +43,6 @@
     group: root
     mode: 0644
     validate: "/usr/sbin/nginx -t -c %s"
+  become: yes
   notify:
    - Reload nginx
